@@ -1,0 +1,277 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* custom style name */
+:root {
+  /* ##colors */
+  --primary-Blue: #252B43;
+  --secondary-sky-blue: #22A6F0;
+  --white-1: #F5F5F5;
+
+  /* ## Typography */
+  /* font-weight */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+
+  /* border-radius */
+  --border-radius: 2px;
+
+  /* transition */
+  --transition: all 0.3s ease-in;
+}
+
+/* general style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--primary-Blue);
+  color: var(--white-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* navbar */
+nav {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: -45px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 12px; 
+  margin-right: 18px;
+  font-weight: var(--fw-500);
+}
+
+nav ul li:nth-child(2):hover, 
+nav ul li:nth-child(3):hover, 
+nav ul li:nth-child(4):hover, 
+nav ul li:nth-child(5):hover {
+  cursor: pointer;
+  color: var(--secondary-sky-blue);
+}
+
+nav ul:first-child {
+  margin-right: 202px;
+}
+
+nav ul:first-child li:first-child {
+  font-size: 18px;
+  margin-right: 70px;
+  font-weight: var(--fw-500);
+}
+
+/* login and join us */
+nav ul:nth-child(2) li {
+  margin-right: 38px;
+}
+
+nav ul:nth-child(2) button {
+  background-color: var(--secondary-sky-blue);
+  border: none;
+  border-radius: var(--border-radius);
+  color: inherit;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+nav ul:nth-child(2) li:hover {
+  cursor: pointer;
+  color: var(--secondary-sky-blue);
+}
+
+nav ul:nth-child(2) button .fa-arrow-right {
+  margin-left: 13px;
+}
+
+nav ul:nth-child(2) button:hover .fa-arrow-right,
+nav ul:nth-child(2) button:hover {
+  color: var(--primary-Blue);
+}
+
+/* header */
+header {
+  margin-top: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 35%;
+  text-align: center;
+}
+
+header p {
+  margin: 0;
+  font-weight: var(--fw-500);
+  color: var(--secondary-sky-blue);
+  font-size: 12px;
+}
+
+header h1 {
+  margin: 0;
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: var(--fw-500);
+  line-height: 60px;
+}
+
+/* main */
+main {
+  margin-top: 50px;
+  margin-bottom: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p:first-child {
+  margin: 0;
+  max-width: 45%;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* main buttons */
+main #btns button {
+  margin-top: 35px;
+  padding: 12px 24px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+main #btns button:first-child {
+  background-color: var(--secondary-sky-blue);
+  border: transparent;
+  border-radius: var(--border-radius);
+  color: var(--white-1);
+  margin-right: 8px;
+}
+
+main #btns button:nth-child(2) {
+  background-color: var(--primary-Blue);
+  border: 1px solid var(--secondary-sky-blue);
+  border-radius: var(--border-radius);
+  color: var(--secondary-sky-blue);
+}
+
+main #btns button:first-child:hover {
+  color: var(--primary-Blue);
+}
+
+main #btns button:nth-child(2):hover {
+  color: var(--white-1);
+}
+
+/* main cards */
+#cards {
+  margin-top: 101px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 887px;
+  color: var(--primary-Blue);
+}
+
+.card-container {
+  background-color: var(--white-1);
+  padding: 29px 60px 29px 34px;
+  max-width: 279px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.card-container.card1,
+.card-container.card2 {
+  margin-right: 25px;
+}
+
+/* icons */
+.card-container div {
+  width: 60px;
+  height: 65px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.card1 .smile {
+  background-color: #FEDCD2;
+  color: #be2210;
+}
+
+.card2 .check {
+  background-color: #B9EAA8;
+  color: #3FB664;
+}
+
+.card3 .credit {
+  background-color: rgb(172, 172, 252);
+  color: rgb(29, 29, 202);
+}
+
+/* content inside cards */
+.card-container .title {
+  margin-top: 21px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.card-container hr {
+  width: 45px;
+  text-align: left;
+  border: 1px solid rgb(176, 98, 98);
+  margin-inline-start: 0%;
+  margin-bottom: 20px;
+}
+
+.card-container p {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* active card-container style for JS */
+.card-container.active {
+  background-color: var(--secondary-sky-blue);
+  transition: var(--transition);
+}
+
+.card-container.active .title,
+.card-container.active p {
+  color: var(--white-1);
+}
+
+.card-container.active hr {
+  border-color: var(--white-1);
+}
+
+.card-container.active .icon {
+  background-color: var(--white-1);
+  color: var(--secondary-sky-blue);
+  transition: var(--transition);
+}
